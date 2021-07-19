@@ -82,15 +82,50 @@ The process starts at t = 0, and then, at each next iteration, meaning at t = 1,
 * The AI performs the action
 * The AI receives the reward
 * The AI enters the following state
-* 
+
 The goal of the AI is always the same in Reinforcement Learning: it is to maximize the accumulated rewards over time, that is, the sum of all the received at each transition.
 
 The following graphic will help you visualize and remember an MDP better, the basis of Reinforcement Learning models:
 
 ![image](https://user-images.githubusercontent.com/11299574/126190399-d588b7fb-aa0b-4ecd-9ddd-a3a3c06a4387.png)
-Figure 1: The Markov Decision process
+
+       Figure 1: The Markov Decision process
+       
+
+## Principle #5 – Training and inference
 
 The last principle is training and inference; in training, the AI learns, and in inference, it predicts.
 
+When building an AI, there is a time for the training mode, and a separate time for inference mode. 
 
+* Training mode
+
+The very first step of building an AI is to build an environment in which the input states, the output actions, and a system of rewards are clearly defined. 
+Inside this environment we will build an AI to interact with it, trying to maximize the total reward accumulated over time.
+
+There will be a preliminary (and long) period of time during which the AI will be trained to do that. 
+That period of time is called the training.
+The AI tries to accomplish a certain goal over and over again until it succeeds. 
+After each attempt, the parameters of the AI model are modified in order to do better at the next attempt.
+
+For example, let's say we're building a self-driving car and we want it to go from point A to point B. Let's also imagine that there are some obstacles that we want our self-driving car to avoid. Here is how the training process happens:
+
+It's just like we would train a dog to sit: we give the dog a treat or say "good boy" (positive reward) if the dog sits. 
+And we give the dog nothing if the dog disobeys (negative reward). That process is training, and it works the same way in Reinforcement Learning.
+
+At the end of the attempt (also called an episode), we modify the parameters of the model in order to do better next time. 
+The parameters are modified intelligently, either iteratively through equations (Q-Learning), or by using Machine Learning and Deep Learning techniques such as stochastic gradient descent or backpropagation. 
+We repeat steps again and again, until we reach the desired performance; that is, until we have our AI!
+So, that's training. 
+
+* Inference mode
+
+Inference mode simply comes after AI is fully trained and ready to perform well. 
+It will simply consist of interacting with the environment by performing the actions to accomplish the goal the AI was trained to achieve before in training mode. 
+In inference mode, no parameters are modified at the end of each episode.
+
+For example, imagine we have an AI company that builds customized AI solutions for businesses, and one of our clients asked us to build an AI to optimize the flows in a smart grid. First, we will enter an R&D phase during which we would train our AI to optimize these flows (training mode), and as soon as we have reached a good level of performance, we will deliver our AI to our client and go into production. 
+Our AI would regulate the flows in the smart grid only by observing the current states of the grid and performing the actions it has been trained to do. That's inference mode.
+
+Sometimes, the environment is subject to change, in which case you have to alternate fast between training and inference modes so that your AI can adapt to the new changes in the environment. An even better solution is to train your AI model every day, and go into inference mode with the most recently trained model.
 
