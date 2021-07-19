@@ -35,8 +35,6 @@ Reinforcement Learning models, will take something as input, and will return ano
 * The output is the action performed by the AI. 
 * And in the middle, we have a function (policy) that takes a state as input and returns an action as output.
 
-An AI can have multiple input states which policy interprets according to pre-defined functions and returns a single output or multiple outputs accordingly. 
-
 Summary : It is an intelligent system (a policy) that takes some elements as input, does its magic in the middle, and returns some actions to perform as output. 
 
 Remember that the inputs are also called the states.
@@ -53,16 +51,46 @@ The reward is simply a metric that will tell the AI how well it does over time.
 * This could very well be the reward system defined for an AI; yes as simple as that!
 * A reward doesn't have to be binary, however. It can be continuous.
 
-
 Different AIs will have different reward structures.
 
 The ultimate goal of the AI will always be to maximize the accumulated reward over time.
 
 ```
 ```
+### Principle #3 – The AI environment
+
+It is a very simple framework where we define three things at each time (t):
+
+* The input (the state)
+* The output (the action)
+* The reward (the performance metric)
+
+We always define an environment composed of the preceding elements. It is, however, important to understand that there are more than these three elements in a given AI environment.
+
+For example, In the example of a self-driving car, the environment will also contain all the roads along which the AI is driving and the objects that surround those roads. But what you will always find in common when building any AI, are the three elements of state, action, and reward. 
 
 
+```
+```
+## Principle #4 – The Markov decision process
 
+The Markov decision process is a process that models how the AI interacts with the environment over time. 
+
+The process starts at t = 0, and then, at each next iteration, meaning at t = 1, t = 2, … t = n units of time (where the unit can be anything, for example, 1 second), the AI follows the same format of transition:
+
+* The AI observes the current state
+* The AI performs the action
+* The AI receives the reward
+* The AI enters the following state
+* 
+The goal of the AI is always the same in Reinforcement Learning: it is to maximize the accumulated rewards over time, that is, the sum of all the received at each transition.
+
+The following graphic will help you visualize and remember an MDP better, the basis of Reinforcement Learning models:
+
+![image](https://user-images.githubusercontent.com/11299574/126190399-d588b7fb-aa0b-4ecd-9ddd-a3a3c06a4387.png)
+Figure 1: The Markov Decision process
+
+The last principle is training and inference; in training, the AI learns, and in inference, it predicts.
 
 
 
