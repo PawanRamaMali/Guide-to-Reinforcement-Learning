@@ -27,8 +27,17 @@ This process of interacting with an environment is what we are trying to reprodu
 
 Reinforcement Learning models, will take something as input, and will return another thing as output.
 
-* The input is called the state, or input state. 
+* The input is also called the state, or input state. 
 * The output is the action performed by the AI. 
 * And in the middle, we have a function (policy) that takes a state as input and returns an action as output.
+
+An AI can have multiple input states which policy interprets according to pre-defined functions and returns a single output or multiple outputs accordingly. 
+
+Summary : It is an intelligent system (a policy) that takes some elements as input, does its magic in the middle, and returns some actions to perform as output. 
+
+Remember that the inputs are also called the states.
+
+
+
 
 
