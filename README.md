@@ -75,7 +75,7 @@ For example, In the example of a self-driving car, the environment will also con
 
 ```
 ```
-## Principle #4 – The Markov decision process
+### Principle #4 – The Markov decision process
 
 The Markov decision process is a process that models how the AI interacts with the environment over time. 
 
@@ -95,7 +95,7 @@ The following graphic will help you visualize and remember an MDP better, the ba
        Figure 1: The Markov Decision process
        
 
-## Principle #5 – Training and inference
+### Principle #5 – Training and inference
 
 The last principle is training and inference; in training, the AI learns, and in inference, it predicts.
 
@@ -135,8 +135,23 @@ Sometimes, the environment is subject to change, in which case you have to alter
 
 ```
 ```
-### The multi-armed bandit problem
+## The multi-armed bandit problem
 
+Imagine we are in a room containing five slot machines. 
+For each of them the game is the same: we bet a certain amount of money, say 1 dollar, we pull the arm, and then the machine will either take our money, or give us twice our money back.
+Let's say that if the machine takes our money, our reward is -1, and if the machine returns us twice our money, our reward is +1.
+
+We've defined the rewards; we'll define the states (inputs) and actions (outputs) later. Now, still in the process of defining the environment, let's say that we know, somehow, that one of these machines has a higher probability of giving us a +1 reward than the others when we pull its arm. It doesn't matter how we know this info, but it must be part of the problem assumptions. 
+
+Your goal, as in any AI environment, is to obtain the highest accumulated reward during your time of play. Let's say you are going to bet 1,000 dollars in total, meaning that you are going to bet 1 dollar, 1,000 times, each time by pulling the arm of any of these five slot machines. 
+
+The question is: What should be your strategy, so that after having played 1,000 times, you get the maximum amount of money to take home with you?
+
+The first step of your strategy must be to figure out, in the minimum number of plays, which of these five slot machines has the highest chance of giving you a 1 reward. In other words, you have to quickly figure out the slot machine with the highest success rate. Then, as soon as you figure it out, you simply need to keep playing on that most successful slot machine.
+
+Finding the most successful slot machine is not hard; one simple strategy could be to play 100 times on each of these five slot machines and then, at the end, look at which of them gave you more money. Statistically, this gives you a good chance of finding that most generous slot machine.
+
+All the challenge is in "quickly". The hardest part is to find the best slot machine in a minimum number of trials. This is where your first AI model comes into play.
 
 
 
