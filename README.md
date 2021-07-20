@@ -155,3 +155,14 @@ All the challenge is in "quickly". The hardest part is to find the best slot mac
 
 
 
+```
+```
+## The Thompson Sampling model
+
+* Our problem is trying to find the best slot machine with the highest winning chance out of many. 
+* A not-so-optimal solution would be to play 100 rounds on each of our slot machines and see which one has the highest winning rate. 
+* A better solution is a method called Thompson Sampling.
+
+Thompson Sampling uses a distribution function, called Beta, that takes two arguments. 
+Higher the first argument is, the better our slot machine is, and the higher the second argument is, the worse our slot machine is.
+
