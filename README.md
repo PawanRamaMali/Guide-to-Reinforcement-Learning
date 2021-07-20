@@ -166,3 +166,16 @@ All the challenge is in "quickly". The hardest part is to find the best slot mac
 Thompson Sampling uses a distribution function, called Beta, that takes two arguments. 
 Higher the first argument is, the better our slot machine is, and the higher the second argument is, the worse our slot machine is.
 
+
+Therefore, we can define this function as:  
+
+   x = B(a,b)
+
+where:
+
+x – a random choice from our Beta distribution
+B – our Beta function
+a – the first argument
+b – the second argument
+
+
