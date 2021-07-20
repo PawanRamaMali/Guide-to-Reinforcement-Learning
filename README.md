@@ -151,7 +151,7 @@ The first step of your strategy must be to figure out, in the minimum number of 
 
 Finding the most successful slot machine is not hard; one simple strategy could be to play 100 times on each of these five slot machines and then, at the end, look at which of them gave you more money. Statistically, this gives you a good chance of finding that most generous slot machine.
 
-All the challenge is in "quickly". The hardest part is to find the best slot machine in a minimum number of trials. This is where your first AI model comes into play.
+The hardest part is to find the best slot machine in a minimum number of trials. This is where our first AI model comes into play.
 
 
 
@@ -173,9 +173,22 @@ Therefore, we can define this function as:
 
 where:
 
-x – a random choice from our Beta distribution
-B – our Beta function
-a – the first argument
-b – the second argument
+* x – a random choice from our Beta distribution
+* B – our Beta function
+* a – the first argument
+* b – the second argument
+
+
+```
+```
+## What is a distribution?
+
+The distribution of a variable is a function that will give, for each value in the possible range of values the variable could take, the probability that this variable is equal to that value.
+
+![image](https://user-images.githubusercontent.com/11299574/126373240-eac36761-00eb-4281-88d6-0c28e4dd377b.png)
+
+Figure 1: The normal distribution
+
+In any distribution, on the x-axis you have the range of values the variable could take, and on the y-axis you have the probability that the variable is equal to each value.
 
 
