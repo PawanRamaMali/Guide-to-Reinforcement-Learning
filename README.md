@@ -4,7 +4,19 @@
 Reinforcement learning is the training of machine learning models to make a sequence of decisions. The agent learns to achieve a goal in an uncertain, potentially complex environment. The computer employs trial and error to come up with a solution to the problem. To get the machine to do what the programmer wants, the artificial intelligence gets either rewards or penalties for the actions it performs. Its goal is to maximize the total reward.
 
 
-### The five principles of Reinforcement Learning
+```
+```
+# What is Reinforcement Learning?
+
+Machine Learning does not include the process of taking actions and interacting with an environment like we humans do. 
+As intelligent human beings, what we constantly keep doing is the following:
+  * We observe some input, whether it's what we see with our eyes, what we hear with our ears, or what we remember in our memory.
+  * These inputs are then processed in our brain.
+  * Eventually, we make decisions and take actions.
+This process of interacting with an environment is what we are trying to reproduce in terms of Artificial Intelligence. And to that extent, the branch of AI that works on this is Reinforcement Learning.
+
+
+## The five principles of Reinforcement Learning
 
 Here are the five fundamental principles:
 
@@ -14,16 +26,7 @@ Here are the five fundamental principles:
 * 4: The Markov decision process
 * 5: Training and inference
 
-```
-```
-### What is Reinforcement Learning?
 
-Machine Learning does not include the process of taking actions and interacting with an environment like we humans do. 
-As intelligent human beings, what we constantly keep doing is the following:
-  * We observe some input, whether it's what we see with our eyes, what we hear with our ears, or what we remember in our memory.
-  * These inputs are then processed in our brain.
-  * Eventually, we make decisions and take actions.
-This process of interacting with an environment is what we are trying to reproduce in terms of Artificial Intelligence. And to that extent, the branch of AI that works on this is Reinforcement Learning.
 
 ```
 ```
@@ -128,4 +131,12 @@ For example, imagine we have an AI company that builds customized AI solutions f
 Our AI would regulate the flows in the smart grid only by observing the current states of the grid and performing the actions it has been trained to do. That's inference mode.
 
 Sometimes, the environment is subject to change, in which case you have to alternate fast between training and inference modes so that your AI can adapt to the new changes in the environment. An even better solution is to train your AI model every day, and go into inference mode with the most recently trained model.
+
+
+```
+```
+### The multi-armed bandit problem
+
+
+
 
