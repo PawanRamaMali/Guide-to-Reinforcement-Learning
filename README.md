@@ -192,3 +192,69 @@ Figure 1: The normal distribution
 In any distribution, on the x-axis you have the range of values the variable could take, and on the y-axis you have the probability that the variable is equal to each value.
 
 
+### Code simulation to select Best slot machine using Thompson Sampling method
+
+``` Python 
+# Importing the libraries
+import numpy as np
+
+# Setting conversion rates and the number of samples
+conversionRates = [0.15, 0.04, 0.13, 0.11, 0.05]  # list of winning chances is conversionRates
+N = 10000  # number of samples, N
+d = len(conversionRates)  # d is the length of your conversion rates list; that is, the number of slot machines.
+
+# Creating the dataset
+X = np.zeros((N, d))  # Create a 2d-array full of zeros, of size N * d
+# An array with N (in this case 10000) rows and d (in this case 5) columns.
+
+# for loop, iterate through every row in that 2d-array X
+for i in range(N):  # time step i - you have won or not by playing a certain slot
+    for j in range(d):
+        if np.random.rand() < conversionRates[j]:
+            # check if a random float number from range (0,1) is smaller than
+            # the conversion rate for the corresponding slot machine.
+            X[i][j] = 1
+
+# Making arrays to count our losses and wins
+# nPosReward (number of wins) and nNegReward (number of losses).
+nPosReward = np.zeros(d)
+nNegReward = np.zeros(d)
+
+# Taking our best slot machine through beta distribution and updating its losses and wins
+# for loop that will iterate through every sample in our dataset and choose the best slot machine.
+for i in range(N):
+    # selected, which will tell you which slot machine was chosen, and maxRandom, which you will use to get the
+    # highest Beta distribution guess across all slot machines
+    selected = 0
+    maxRandom = 0
+
+    for j in range(d):  # core of Thompson Sampling
+        # np.random.beta(a,b), returns random guess
+        randomBeta = np.random.beta(nPosReward[j] + 1, nNegReward[j] + 1)
+        if randomBeta > maxRandom:
+            maxRandom = randomBeta
+            selected = j
+
+        if X[i][selected] == 1:
+            nPosReward[selected] += 1
+        else:
+            nNegReward[selected] += 1
+
+    # Showing which slot machine is considered the best
+    nSelected = nPosReward + nNegReward
+
+for i in range(d):
+    # Display how many times each slot machine was chosen by your algorithm
+    print('Machine number ' + str(i + 1) + ' was selected ' + str(nSelected[i]) + ' times')
+
+print('Conclusion: Best machine is machine number ' + str(np.argmax(nSelected) + 1))
+
+```
+
+
+```
+```
+## Summary of Thompson Sampling model
+
+Thompson Sampling is a powerful sampling technique that enables you to quickly figure out the highest of a number of unknown conversion rates.
+It is always applied in the same frame, called the multi-armed bandit problem, which in the classic sense is composed of several slot machines, each one having a different conversion rate of positive outcomes.
