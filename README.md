@@ -258,3 +258,8 @@ print('Conclusion: Best machine is machine number ' + str(np.argmax(nSelected) +
 
 Thompson Sampling is a powerful sampling technique that enables you to quickly figure out the highest of a number of unknown conversion rates.
 It is always applied in the same frame, called the multi-armed bandit problem, which in the classic sense is composed of several slot machines, each one having a different conversion rate of positive outcomes.
+
+
+Sources : 
+
+AI Crash Course | Packt | https://subscription.packtpub.com/book/data/9781838645359 
