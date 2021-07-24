@@ -283,7 +283,13 @@ Two more fundamentals specific to Q-learning:
 
 * At each iteration the Q-values are updated through the Bellman equation, which simply consists of adding the temporal difference, discounted by a learning rate factor.
 
+```
+```
+## What are CNNs used for?
 
+* CNNs are mostly used with images or videos, and sometimes with text to tackle Natural Language Processing (NLP) problems. 
+* They are often used in object recognition, for example, predicting whether there is a cat or a dog in a picture or video. 
+* They are also often used with deep Q-learning, when the environment returns 2D states of itself, for example, when we are trying to build a self-driving car that reads outputs from cameras around it.
 
 ## Sources : 
 
