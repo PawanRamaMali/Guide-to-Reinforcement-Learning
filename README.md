@@ -260,6 +260,21 @@ Thompson Sampling is a powerful sampling technique that enables you to quickly f
 It is always applied in the same frame, called the multi-armed bandit problem, which in the classic sense is composed of several slot machines, each one having a different conversion rate of positive outcomes.
 
 
-Sources : 
+```
+```
+## Q Learning 
 
-AI Crash Course | Packt | https://subscription.packtpub.com/book/data/9781838645359 
+* is a Reinforcement Learning model.
+* works on the inputs (states) and outputs (actions) principle.
+* works on a predefined environment, including the states (the inputs), the actions (the outputs), and the rewards.
+* is modeled by a Markov decision process.
+* uses a training mode, during which the parameters that are learned are called the Q-values, and an inference mode.
+
+
+
+
+
+
+## Sources : 
+
+* AI Crash Course | Packt | https://subscription.packtpub.com/book/data/9781838645359 
