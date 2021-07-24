@@ -270,8 +270,10 @@ It is always applied in the same frame, called the multi-armed bandit problem, w
 * is modeled by a Markov decision process.
 * uses a training mode, during which the parameters that are learned are called the Q-values, and an inference mode.
 
+Two more fundamentals specific to Q-learning:
 
-
+* There are a finite number of states (there is not an infinity of possible inputs).
+* There are a finite number of actions (only a certain number of actions can be performed).
 
 
 
