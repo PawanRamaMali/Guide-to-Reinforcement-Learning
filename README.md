@@ -275,6 +275,14 @@ Two more fundamentals specific to Q-learning:
 * There are a finite number of states (there is not an infinity of possible inputs).
 * There are a finite number of actions (only a certain number of actions can be performed).
 
+## Q Learning Summary 
+
+* Q-learning model is only applied to environments that have a finite number of input states and a finite number of possible actions to perform.
+
+* The AI learns Q-values through an iterative process, so that the higher the Q-value of a (state, action) pair, the closer the AI gets to the top reward.
+
+* At each iteration the Q-values are updated through the Bellman equation, which simply consists of adding the temporal difference, discounted by a learning rate factor.
+
 
 
 ## Sources : 
